@@ -137,6 +137,6 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 
 
 ## Brainstorming
-[Brainstorming 1](https://hackmd.io/RH-9HlofS0-hXk0W1S4e3w?view)
+[Brainstorming 1](https://hackmd.io/RH-9HlofS0-hXk0W1S4e3w?view) |
 [Brainstorming 2](https://hackmd.io/redrm6JVSgW20nuoW3fNXQ?view)
 
