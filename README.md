@@ -31,12 +31,13 @@ A media-sharing social media app focused around pets. From dogs and cats, to mon
 * User can create an account
 * User can sign into an account
 * User can dictate what their feed will look like by answering a few introductory questions when they first create an account
-* ...
+* User can scroll through their timeline and see a variety of different posts (from their selected interests, accounts they follow, topics they're interested in, etc.).
 
 **Optional Nice-to-have Stories**
 
-* [User can [specific action, e.g., persist user information across working sessions]]
-* ...
+* User can create profiles for their pets, including details such as breed, age, personality traits, and favorite activities.
+* User can plan pet playdates or matches based on location, pet preferences, and compatibility assessments.
+* User can track their pet's health and care routines, including vaccination records, medical appointments, grooming schedules, and dietary preferences.
 
 ### 2. Screen Archetypes
 
