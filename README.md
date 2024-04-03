@@ -11,7 +11,7 @@
 
 ### Description
 
-A media-sharing social media app focused around pets. From dogs and cats, to monkeys and lizards. All sorts of furry and non-furry friends are welcome.
+PetPix is a vibrant and engaging social media platform designed exclusively for pet lovers. Whether you're a proud pet parent, an animal enthusiast, or simply adore cute and cuddly companions, PetPix offers a welcoming space to connect, share, and celebrate the joys of pet ownership.
 
 ### App Evaluation
 
