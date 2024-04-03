@@ -133,3 +133,10 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 - * [GET] /posts/{post_id} - to retrieve detailed information about a specific post
   * [POST] /posts/{post_id}/like - to like a post
   * [POST] /posts/{post_id}/comment - to add a comment to a post
+  * 
+
+
+## Brainstorming
+[Brainstorming 1](https://hackmd.io/RH-9HlofS0-hXk0W1S4e3w?view)
+[Brainstorming 2](https://hackmd.io/redrm6JVSgW20nuoW3fNXQ?view)
+
