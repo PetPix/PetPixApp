@@ -9,10 +9,14 @@ import SwiftUI
 struct LoginView: View {
     @State private var username = ""
     @State private var password = ""
-    @EnvironmentObject var authenticationManager: AuthenticationManager 
+    @EnvironmentObject var authenticationManager: AuthenticationManager
     
     var body: some View {
         VStack {
+            Text("PetPix")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(.bottom, 20)
             TextField("Username", text: $username)
                 .padding()
                 .background(Color.gray.opacity(0.2))
@@ -27,7 +31,7 @@ struct LoginView: View {
             
             Button(action: {
                 // Perform login action here
-                authenticationManager.login(username: username, password: password) // Calling login method from authentication manager
+                authenticationManager.login(username: username, password: password) 
             }) {
                 Text("Login")
                     .font(.headline)
@@ -39,7 +43,7 @@ struct LoginView: View {
             }
             Button(action: {
                 // Perform create account action here
-                authenticationManager.create(username: username, password: password) // Calling create method from authentication manager
+                authenticationManager.create(username: username, password: password)
             }) {
                 Text("Create Account")
                     .font(.headline)
