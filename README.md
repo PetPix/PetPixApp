@@ -32,6 +32,8 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 * User can sign into an account
 * User can dictate what their feed will look like by answering a few introductory questions when they first create an account
 * User can scroll through their timeline and see a variety of different posts (from their selected interests, accounts they follow, topics they're interested in, etc.).
+* User can visit explore page
+* User can visit and modify their account settings
 
 **Optional Nice-to-have Stories**
 
@@ -89,7 +91,7 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 
 ### Models
 
-[User]
+#### User
 | Property | Type   | Description                                  |
 |----------|--------|----------------------------------------------|
 | username | String | unique id for the user post (default field)  |
@@ -97,7 +99,7 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 | Name     | String | User's name that's displayed on their account|
 | email    | String | user's email where they'll get account info  |
 
-[Pet]
+#### Pet
 | Property | Type   | Description                                  |
 |----------|--------|----------------------------------------------|
 | Name     | String | Pet's name that's displayed on their profile |
@@ -108,29 +110,29 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 ### Networking
 
 - Login Screen
-- * [POST] /auth/login - to authenticate user login
+  * [POST] /auth/login - to authenticate user login
   * [POST] /auth/signup - to create a new user account
  
 - Home Feed Screen
-- * [GET] /posts - to retrieve posts from users followed by the current user
+  * [GET] /posts - to retrieve posts from users followed by the current user
   * [POST] /posts - to create a new post
  
 - Explore Pets Screen
-- * [GET] /pets/explore - to fetch a list of pets for users to explore
+  * [GET] /pets/explore - to fetch a list of pets for users to explore
   * [POST] /pets/follow - to follow a pet
  
 - User Profile Screen
-- * [GET] /profile/{username} - to retrieve user profile information
+  * [GET] /profile/{username} - to retrieve user profile information
   * [PUT] /profile/{username} - to update user profile information
   * [GET] /profile/{username}/posts - to retrieve posts from a specific user
  
 - Pet Profile Screen
-- * [GET] /pet/{pet_id} - to retrieve pet profile information
+  * [GET] /pet/{pet_id} - to retrieve pet profile information
   * [PUT] /pet/{pet_id} - to update pet profile information
   * [GET] /pet/{pet_id}/posts - to retrieve posts associated with a specific pet
  
 - Post Details Screen
-- * [GET] /posts/{post_id} - to retrieve detailed information about a specific post
+  * [GET] /posts/{post_id} - to retrieve detailed information about a specific post
   * [POST] /posts/{post_id}/like - to like a post
   * [POST] /posts/{post_id}/comment - to add a comment to a post
   * 
