@@ -6,6 +6,7 @@
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
+5. [Build Progress](#Build-Progress)
 
 ## Overview
 
@@ -135,10 +136,15 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
   * [GET] /posts/{post_id} - to retrieve detailed information about a specific post
   * [POST] /posts/{post_id}/like - to like a post
   * [POST] /posts/{post_id}/comment - to add a comment to a post
-  * 
+ 
 
-
-## Brainstorming
+### Brainstorming
 [Brainstorming 1](https://hackmd.io/RH-9HlofS0-hXk0W1S4e3w?view) |
 [Brainstorming 2](https://hackmd.io/redrm6JVSgW20nuoW3fNXQ?view)
+
+
+
+## Build Progress
+
+![Screen Recording 2024-04-06 at 6 08 04 AM](https://github.com/PetPix/PetPixApp/assets/90480945/a5fcacbf-7464-4274-87d6-e2a9b72b2866)
 
