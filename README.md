@@ -28,8 +28,8 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 
 **Required Must-have Stories**
 
-* User can create an account
-* User can sign into an account
+* ✅ User can create an account
+* ✅ User can sign into an account
 * User can dictate what their feed will look like by answering a few introductory questions when they first create an account
 * User can scroll through their timeline and see a variety of different posts (from their selected interests, accounts they follow, topics they're interested in, etc.).
 * User can visit explore page
