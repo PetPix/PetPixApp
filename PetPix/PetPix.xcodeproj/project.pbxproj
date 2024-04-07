@@ -14,6 +14,13 @@
 		5A5F12EB2BC04EC2002B197F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5F12EA2BC04EC2002B197F /* LoginView.swift */; };
 		5A5F12ED2BC04FF8002B197F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5F12EC2BC04FF8002B197F /* HomeScreen.swift */; };
 		5A5F12F52BC0525B002B197F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5F12F42BC0525B002B197F /* AuthenticationManager.swift */; };
+		C4361EF02BC1AB1A008FFB0D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4361EEF2BC1AB1A008FFB0D /* SearchView.swift */; };
+		C4361EF22BC1ACFC008FFB0D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4361EF12BC1ACFC008FFB0D /* Post.swift */; };
+		C4361EF82BC1AE86008FFB0D /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C4361EF72BC1AE86008FFB0D /* ParseSwift */; };
+		C4361F002BC1B81A008FFB0D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C4361EFF2BC1B81A008FFB0D /* Alamofire */; };
+		C4361F022BC1B81A008FFB0D /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C4361F012BC1B81A008FFB0D /* AlamofireDynamic */; };
+		C4361F082BC1BCDF008FFB0D /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = C4361F072BC1BCDF008FFB0D /* AlamofireImage */; };
+		C4361F0F2BC1C7C0008FFB0D /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4361F0E2BC1C7C0008FFB0D /* PostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +32,9 @@
 		5A5F12EA2BC04EC2002B197F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5A5F12EC2BC04FF8002B197F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		5A5F12F42BC0525B002B197F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		C4361EEF2BC1AB1A008FFB0D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C4361EF12BC1ACFC008FFB0D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C4361F0E2BC1C7C0008FFB0D /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4361EF82BC1AE86008FFB0D /* ParseSwift in Frameworks */,
+				C4361F082BC1BCDF008FFB0D /* AlamofireImage in Frameworks */,
+				C4361F022BC1B81A008FFB0D /* AlamofireDynamic in Frameworks */,
+				C4361F002BC1B81A008FFB0D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +73,11 @@
 			children = (
 				5A5F12DC2BC04E07002B197F /* PetPixApp.swift */,
 				5A5F12F42BC0525B002B197F /* AuthenticationManager.swift */,
-				5A5F12DE2BC04E07002B197F /* ContentView.swift */,
-				5A5F12EA2BC04EC2002B197F /* LoginView.swift */,
-				5A5F12EC2BC04FF8002B197F /* HomeScreen.swift */,
+				C4361EF32BC1AD95008FFB0D /* Models */,
+				C4361F092BC1C257008FFB0D /* Login */,
+				C4361F0A2BC1C272008FFB0D /* Search */,
+				C4361F0B2BC1C296008FFB0D /* Post */,
+				C4361EFA2BC1B5B9008FFB0D /* Views */,
 				5A5F12E02BC04E09002B197F /* Assets.xcassets */,
 				5A5F12E22BC04E09002B197F /* Preview Content */,
 			);
@@ -74,6 +90,47 @@
 				5A5F12E32BC04E09002B197F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C4361EF32BC1AD95008FFB0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4361EF12BC1ACFC008FFB0D /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4361EFA2BC1B5B9008FFB0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A5F12DE2BC04E07002B197F /* ContentView.swift */,
+				5A5F12EC2BC04FF8002B197F /* HomeScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C4361F092BC1C257008FFB0D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5A5F12EA2BC04EC2002B197F /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C4361F0A2BC1C272008FFB0D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C4361EEF2BC1AB1A008FFB0D /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C4361F0B2BC1C296008FFB0D /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				C4361F0E2BC1C7C0008FFB0D /* PostView.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +149,12 @@
 			dependencies = (
 			);
 			name = PetPix;
+			packageProductDependencies = (
+				C4361EF72BC1AE86008FFB0D /* ParseSwift */,
+				C4361EFF2BC1B81A008FFB0D /* Alamofire */,
+				C4361F012BC1B81A008FFB0D /* AlamofireDynamic */,
+				C4361F072BC1BCDF008FFB0D /* AlamofireImage */,
+			);
 			productName = PetPix;
 			productReference = 5A5F12D92BC04E07002B197F /* PetPix.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +183,11 @@
 				Base,
 			);
 			mainGroup = 5A5F12D02BC04E07002B197F;
+			packageReferences = (
+				C4361EF62BC1AE86008FFB0D /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				C4361EFE2BC1B81A008FFB0D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C4361F062BC1BCDF008FFB0D /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 5A5F12DA2BC04E07002B197F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,8 +217,11 @@
 				5A5F12ED2BC04FF8002B197F /* HomeScreen.swift in Sources */,
 				5A5F12EB2BC04EC2002B197F /* LoginView.swift in Sources */,
 				5A5F12DF2BC04E07002B197F /* ContentView.swift in Sources */,
+				C4361EF02BC1AB1A008FFB0D /* SearchView.swift in Sources */,
 				5A5F12F52BC0525B002B197F /* AuthenticationManager.swift in Sources */,
+				C4361EF22BC1ACFC008FFB0D /* Post.swift in Sources */,
 				5A5F12DD2BC04E07002B197F /* PetPixApp.swift in Sources */,
+				C4361F0F2BC1C7C0008FFB0D /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +362,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +391,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +427,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4361EF62BC1AE86008FFB0D /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.14.2;
+			};
+		};
+		C4361EFE2BC1B81A008FFB0D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		C4361F062BC1BCDF008FFB0D /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4361EF72BC1AE86008FFB0D /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4361EF62BC1AE86008FFB0D /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+		C4361EFF2BC1B81A008FFB0D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4361EFE2BC1B81A008FFB0D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C4361F012BC1B81A008FFB0D /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4361EFE2BC1B81A008FFB0D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		C4361F072BC1BCDF008FFB0D /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4361F062BC1BCDF008FFB0D /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A5F12D12BC04E07002B197F /* Project object */;
 }

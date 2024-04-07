@@ -11,9 +11,10 @@ struct ContentView: View {
     var body: some View {
         TabView {
             HomeScreen()
-            ExplorePetsScreen()
+            SearchView()
             UserProfileScreen()
             SettingsScreen()
+            PostView()
         }
     }
 }
