@@ -27,29 +27,28 @@ struct SearchView: View {
             .border(.secondary)
             
             List(posts) { post in
-//                if let user = post.user {
-//                    if let username = user.username {
-//                        Text(username)
-//                            .font(.caption)
-//                    }
-//                }
                 if let postUsername = post.username {
                     Text(postUsername)
                         .font(.caption)
+                        .foregroundColor(.blue)
                 }
                 if let postImageUrl = post.imageFile?.url {
-                    AsyncImage(url: (postImageUrl)) { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 200, height: 200, alignment: .center)
-                    } placeholder: {
-                        ProgressView()
-                    }
+                        AsyncImage(url: (postImageUrl)) { image in
+                            image.resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .clipped()
+                                .padding()
+//                                .frame(width: 200, height: 200, alignment: .center)
+                        } placeholder: {
+                            ProgressView()
+                        }
                 }
                 if let caption = post.caption {
                     Text(caption)
                         .font(.caption)
                 }
+                Spacer()
             }
         }
         .navigationBarTitle("Search")

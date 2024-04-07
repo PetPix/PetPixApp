@@ -24,23 +24,6 @@ struct HomeScreen: View {
     }
 }
 
-struct ExplorePetsScreen: View {
-    var body: some View {
-        VStack {
-            Text("Explore Pets Screen")
-                .font(.title)
-            
-            Spacer()
-        }
-        .navigationBarTitle("Explore Pets")
-        .tabItem {
-            Image(systemName: "magnifyingglass")
-            Text("Explore")
-        }
-        .tag(1)
-    }
-}
-
 struct SettingsScreen: View {
     var body: some View {
         VStack {
