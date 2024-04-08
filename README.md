@@ -33,7 +33,7 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 * ✅ User can sign into an account
 * User can dictate what their feed will look like by answering a few introductory questions when they first create an account
 * User can scroll through their timeline and see a variety of different posts (from their selected interests, accounts they follow, topics they're interested in, etc.).
-* User can visit explore page
+* ✅ User can visit explore page
 * User can visit and modify their account settings
 
 **Optional Nice-to-have Stories**
@@ -44,7 +44,7 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 
 ### 2. Screen Archetypes
 
-- [ ] **Login Screen**
+- [x] **Login Screen**
 * Required user feature: User can log in / create an account.
 - [ ] **Introductory Questions Screen**
 * Required user feature: User can determine their timeline.
@@ -56,10 +56,10 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 **Tab Navigation** (Tab to Screen)
 
 
-- [ ] Home Feed
-- [ ] Profile
-- [ ] Post/Create/Upload
-- [ ] Search & Explore
+- [x] Home Feed
+- [x] Profile
+- [x] Post/Create/Upload
+- [x] Search & Explore
 
 **Flow Navigation** (Screen to Screen)
 
@@ -70,11 +70,11 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
   * Leads to **Post/Create/Upload**
   * Leads to **User on timeline**
   * Leads to **Search & Explore**
-- [ ] **Profile**
+- [x] **Profile**
   * Leads to **Edit profile picture**
   * Leads to **Settings**
   * Leads to **Privacy**
-- [ ] [**Create**]
+- [x] [**Create**]
   * Leads to **Camera**
   * Leads to **Photo Gallery**
 
@@ -147,4 +147,10 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 ## Build Progress
 
 ![Screen Recording 2024-04-06 at 6 08 04 AM](https://github.com/PetPix/PetPixApp/assets/90480945/a5fcacbf-7464-4274-87d6-e2a9b72b2866)
+
+<div>
+    <a href="https://www.loom.com/share/7679d390ca4b49df888b60ec9e709095">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/7679d390ca4b49df888b60ec9e709095-with-play.gif">
+    </a>
+  </div>
 
