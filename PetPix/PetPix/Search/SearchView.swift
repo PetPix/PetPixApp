@@ -13,6 +13,7 @@ import AlamofireImage
 struct SearchView: View {
     @State private var searchFor = ""
     @State private var posts = [Post]()
+    
     var body: some View {
         VStack(alignment: .center) {
             TextField(
@@ -23,32 +24,47 @@ struct SearchView: View {
                 queryPosts(searchText: searchFor)
             }
             .textInputAutocapitalization(.never)
+            .textFieldStyle(.roundedBorder)
             .disableAutocorrection(true)
             .border(.secondary)
-            
-            List(posts) { post in
-                if let postUsername = post.username {
-                    Text(postUsername)
-                        .font(.caption)
-                        .foregroundColor(.blue)
-                }
-                if let postImageUrl = post.imageFile?.url {
-                        AsyncImage(url: (postImageUrl)) { image in
-                            image.resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                .clipped()
-                                .padding()
-//                                .frame(width: 200, height: 200, alignment: .center)
-                        } placeholder: {
-                            ProgressView()
+            .padding()
+            ScrollView {
+                ForEach(posts) { post in
+                    VStack(alignment: .center, spacing: 0) {
+                        HStack {
+                            if let postUsername = post.username {
+                                Text("@" + postUsername)
+                                    .font(.headline).italic()
+                                    .foregroundColor(.blue)
+                                    .padding()
+                                Spacer()
+                            }
                         }
+                        if let postImageUrl = post.imageFile?.url {
+                            AsyncImage(url: (postImageUrl)) { image in
+                                image.resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    .clipped()
+                                    .padding()
+                            } placeholder: {
+                                ProgressView()
+                            }
+                        }
+                        HStack {
+                            if let caption = post.caption {
+                                Text(caption)
+                                    .font(.body)
+                                    .padding()
+                                Spacer()
+                            }
+                        }
+                    }
+                    .background(Color.blue.opacity(0.25))
+                    .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .circular))
+                    .padding()
+                    Spacer()
                 }
-                if let caption = post.caption {
-                    Text(caption)
-                        .font(.caption)
-                }
-                Spacer()
             }
         }
         .navigationBarTitle("Search")

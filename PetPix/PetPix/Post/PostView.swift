@@ -13,6 +13,7 @@ struct PostView: View {
     @State private var postImage: UIImage?
     @State private var caption: String = ""
     @State private var isPostImagePickerPresented = false
+    @State private var postSubmitted = false;
     
     @EnvironmentObject var authenticationManager: AuthenticationManager
     
@@ -42,9 +43,14 @@ struct PostView: View {
                 TextField("Caption:", text: $caption)
                 Button("Share Post") {
                     uploadPost()
+                    postSubmitted = true;
+                }
+                if (postSubmitted) {
+                    Text("Post successfully submitted!")
                 }
             }
         .textFieldStyle(.roundedBorder)
+        .padding()
         .navigationBarTitle("Post")
         .sheet(isPresented: $isPostImagePickerPresented) {
             PostImagePicker(image: self.$postImage)
@@ -72,7 +78,6 @@ struct PostView: View {
             switch result {
             case .success(let post):
                 print("✅ Post Saved! \(post)")
-                //todo: return to home page>
             case .failure(let error):
                 print("Error uploading post.\(error)")
             }
