@@ -24,22 +24,49 @@ struct HomeScreen: View {
     }
 }
 
+// Murtajiz's feature - Settings screen
 struct SettingsScreen: View {
     var body: some View {
-        VStack {
-            Text("Settings Screen")
-                .font(.title)
+        
+        //        VStack {
+        //            Text("Settings Screen")
+        //                .font(.title)
+        //
+        //            Spacer()
+        //        }
+        
+        NavigationView {
             
-            Spacer()
+            Form {
+                
+                Section(header: Text("Display")) {
+                    
+                    Toggle(isOn: .constant(false), label: {
+                        Text("Dark Mode")
+                    })
+                    
+                    // This will be the first column1
+                    
+                    Toggle(isOn: .constant(true), label: {
+                        Text("Use System Settings")
+                    })
+                    
+                }
+                
+            }
+            
         }
-        .navigationBarTitle("Settings")
-        .tabItem {
-            Image(systemName: "gear")
-            Text("Settings")
+            
+            .navigationBarTitle("Settings")
+            .tabItem {
+                Image(systemName: "gear")
+                Text("Settings")
+            }
+            .tag(3)
+            
         }
-        .tag(3)
-    }
-}
+    } // End Settings screen
+
 //Created by: Ashly Ruiz
 struct UserProfileScreen: View {
     @State private var image: UIImage?
