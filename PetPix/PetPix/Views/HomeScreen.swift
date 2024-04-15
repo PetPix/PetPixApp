@@ -122,6 +122,8 @@ struct UserProfileScreen: View {
     @State private var bio = ""
     @State private var isImagePickerPresented = false
     @State private var isEditing = false
+    @EnvironmentObject var authenticationManager: AuthenticationManager
+    
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 20) {
@@ -174,6 +176,9 @@ struct UserProfileScreen: View {
                     TextField("Username", text: $username)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .disabled(!isEditing)
+                        .onAppear {
+                            username = authenticationManager.curUsername
+                        }
                     
                     Text("Name:")
                     TextField("Name", text: $name)
