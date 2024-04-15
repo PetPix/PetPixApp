@@ -4,23 +4,71 @@
 //
 //  Created by Ashly Ruiz on 4/4/24.
 //
-
 import SwiftUI
 
 struct HomeScreen: View {
-    var body: some View {
-        VStack {
-            Text("PetPix")
-                .font(.title)
-            
-            Spacer()
+    @StateObject private var viewModel = PostsViewModel()
+
+        var body: some View {
+            VStack {
+                Text("PetPix")
+                    .font(.title)
+                    .padding(.top)
+
+                ScrollView {
+                    VStack(spacing: 30) {
+                        ForEach(viewModel.posts, id: \.objectId) { post in
+                            if let url = post.imageFile?.url {
+                                VStack {
+                                    AsyncImage(url: url) { phase in
+                                        switch phase {
+                                        case .empty:
+                                            ProgressView().frame(width: 100, height: 100)
+                                        case .success(let image):
+                                            image.resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 300, height: 300)
+                                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                                .shadow(radius: 7)
+                                        case .failure:
+                                            Image(systemName: "photo").foregroundColor(.gray)
+                                        @unknown default:
+                                            EmptyView()
+                                        }
+                                    }
+                                    .frame(maxWidth: .infinity)
+
+                                    if let username = post.username {
+                                        Text(username)
+                                            .font(.headline)
+                                            .frame(maxWidth: 300, alignment: .leading)
+                                            .padding(.top, 2)
+                                    }
+
+                                    if let caption = post.caption, !caption.isEmpty {
+                                        Text(caption)
+                                            .font(.caption)
+                                            .frame(maxWidth: 300, alignment: .leading)
+                                            .multilineTextAlignment(.leading)
+                                            .padding(.top, 2)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+                .onAppear {
+                    viewModel.fetchPosts()
+                }
+            }
+            .navigationBarTitle("Home")
+            .tabItem {
+                Image(systemName: "house")
+                Text("Home")
+            }
+            .tag(0)
         }
-        .navigationBarTitle("Home")
-        .tabItem {
-            Image(systemName: "house")
-            Text("Home")
-        }
-        .tag(0)
     }
 }
 
