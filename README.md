@@ -157,3 +157,6 @@ PetPix is a vibrant and engaging social media platform designed exclusively for 
 ## Demo Day Prep Video
 https://www.youtube.com/watch?v=YqWYV-0FvLw
 
+## Demo
+![petpix-demo-04-14-24](https://github.com/PetPix/PetPixApp/assets/90480945/51daa4f5-993f-444c-b838-d83c63bcbbe4)
+
