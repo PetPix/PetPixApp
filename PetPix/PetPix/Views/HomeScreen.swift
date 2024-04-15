@@ -70,7 +70,6 @@ struct HomeScreen: View {
             .tag(0)
         }
     }
-}
 
 // Murtajiz's feature - Settings screen
 struct SettingsScreen: View {
