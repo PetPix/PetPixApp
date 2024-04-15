@@ -121,16 +121,16 @@ struct UserProfileScreen: View {
     @State private var name = ""
     @State private var bio = ""
     @State private var isImagePickerPresented = false
-
+    @State private var isEditing = false
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 20) {
                 HStack {
                     Spacer()
                     Button(action: {
-                        self.isImagePickerPresented = true
+                        self.isEditing.toggle()
                     }) {
-                        Text("Edit")
+                        Text(isEditing ? "Done" : "Edit")
                     }
                     .padding()
                 }
@@ -157,7 +157,6 @@ struct UserProfileScreen: View {
                     }
                     Spacer()
                 }
-
                 VStack(alignment: .center, spacing: 20) {
                     Button(action: {
                         self.isImagePickerPresented = true
@@ -168,21 +167,23 @@ struct UserProfileScreen: View {
                     .padding()
                     .frame(maxWidth: .infinity) // Ensure button occupies full width
                 }
-
                 Spacer()
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Username:")
                     TextField("Username", text: $username)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .disabled(!isEditing)
                     
                     Text("Name:")
                     TextField("Name", text: $name)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .disabled(!isEditing)
                     
                     Text("Bio:")
                     TextField("Bio", text: $bio)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .disabled(!isEditing)
                 }
             }
             .padding()
@@ -201,31 +202,24 @@ struct UserProfileScreen: View {
 //Created by: Ashly Ruiz
 struct ImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?
-
     func makeCoordinator() -> Coordinator {
         return Coordinator(parent: self)
     }
-
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let picker = UIImagePickerController()
         picker.delegate = context.coordinator
         return picker
     }
-
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
-
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         let parent: ImagePicker
-
         init(parent: ImagePicker) {
             self.parent = parent
         }
-
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[.originalImage] as? UIImage {
                 parent.image = image
             }
-
             picker.dismiss(animated: true)
         }
     }
